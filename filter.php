@@ -20,16 +20,28 @@ $finalresult = str_replace($badword, "***", $paragraph);
     <title></title>
 </head>
 
-<body>
+<body class="bg-primary">
     <div class="container">
-        <h4 class="py-4">
-            <!-- mostra risultato -->
-            <?php echo $finalresult ?>
-        </h4>
+        <div class="row">
+            <div class="col-6">
+                <h4 class="py-4">
+                    <div class="py-2">Senza Censura</div>
+                    <!-- mostra paragrafo senza censura -->
+                    <?php echo $paragraph; ?>
+                </h4>
+            </div>
+            <div class="col-6">
+                <h4 class="py-4">
+                    <div class="py-2">Con Censura</div>
+                    <!-- mostra risultato finale-->
+                    <?php echo $finalresult; ?>
+                </h4>
+            </div>
 
-        <!-- per tornare indietro -->
-        <button class="btn btn-dark">
-            <a href="./index.php">Torna indietro</a>
-        </button>
+            <!-- per tornare indietro -->
+            <button class="btn btn-dark">
+                <a href="./index.php">Torna indietro</a>
+            </button>
+        </div>
     </div>
 </body>
